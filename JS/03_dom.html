@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            DOM
+            1. Document Object Model(문서 객체 모델)
+            2. HTML문서(Document)의 구성 요소(태그)를 객체(Object)로 처리할 수 있는 방식이다.
+            3. 문서 객체 알아내기
+                1) document.getElementById('아이디')         : 변수
+                2) document.getElementsByClassName('클래스') : 배열
+                3) document.getElementsByTagName('태그')     : 배열
+                4) document.querySelector('선택자')          : 변수
+                5) document.querySelectorAll('선택자')       : 배열 하나의 요소라도 배열 만들어서 사용 
+        */ 
+
+
+    </script>
+    
+
+    <!--  돔에서 스크립트 처리 할 때는 태그가 위에 스크립트가 아래 있어야 한다. /중요/  -->
+    <script>
+        // null 인식이 안 된다. <div id="box1" class="box1"></div> 스크립트 밖에 있으면 인식이 안된다. 위에서 아래 순서로 
+        // DOM 처리할 구성요소(Element = 태그)가 반드시 스크립트 보다 먼저 인식되어야 한다.
+        var box1 = document.getElementById('box1');
+        console.log(box1);
+    </script>
+    <div id="box1">나중에 나타난 id는 인식되지 않는다.</div>
+
+    
+    <div id="box2" class="box2"></div>
+    <script>
+
+        // 1. 아이디
+        var box2 = document.getElementById('box2');
+        console.log(box2);
+
+        // 2. 클래스
+        var box2 = document.getElementsByClassName('box2');
+        console.log(box2);
+
+        // 3. 태그
+        var div = document.getElementsByTagName('div');
+        console.log(div);
+
+        // 4. 선택자
+        var box2 = document.querySelector('#box2');
+        console.log(box2);
+        var box2 = document.querySelector('.box2');
+        console.log(box2);
+        var div = document.querySelector('div');
+        console.log(div);
+
+        // 5. 선택자 (배열)
+        var box2 = document.querySelectorAll('#box2');
+        console.log(box2);
+        var box2 = document.querySelectorAll('.box2');
+        console.log(box2);
+        var div = document.querySelectorAll('div');
+        console.log(div);
+    </script>
+    
+</body>
+</html>

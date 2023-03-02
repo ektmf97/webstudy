@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        /* 
+            transition 
+            1. 특정 속성이 이행(transition))되는 과정을 볼 수 있다.
+            2. 주요 이행 속성 
+                all(디폴트), width, height, margin, padding 
+                background, border
+                opacity, visibility
+                transform(변형) - 형태를 바꾸는 것 
+        */
+    </style>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            /* 박스의 크기 변화를 이행(transition) 처리하기 */
+            transition-property: all; /* 모든 속성의 변화를 볼 수 있다. */
+            transition-duration: 3s; /* 3초동안 속성의 변화를 볼 수 있다. */
+            transition-timing-function: linear; /* 일정한 속도(linear)로 속성의 변화를 볼 수 있다. */
+            transition-delay: 1s; /* 1초후에 이행(transition) 동작이 동작된다. */
+        }
+        /* 마우스 가져다 됐을 때 */
+        .box1:hover {
+            width: 200px;
+
+        }
+        /*  마우스 꾹 누를때 */
+        .box1:active{
+            height: 200px;
+        }
+    </style>
+    <div class="box1">BOX</div>
+
+    <style>
+        .box2{
+            margin: 0 auto; /* 가운데로 보내기 좌우 상과없이 */
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            /* 변형(transform) 속성이 3초동안  이행(transition) 되는 과정을 보겠다. */
+            transition-property: transform;
+            transition-duration: 3s;
+            
+
+        }
+        .box2:active {
+            transform: scale(2,2); /* scale 크기를 바꾸겠다.*/
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    </style>
+    <div class="box2">BOX2</div>
+
+    <style>
+        .box3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            /* 변형 속성이 1초동안 이행 되는 과정을 보겠다. */
+            transition-property: transform;
+            transition-duration: 1s;
+        }
+        .box3:active {
+            transform: translate(200px, 100px); /* 가로 방향 300px , 세로 방향 300opx 이동하기*/
+        }
+    </style>
+    <div class="box3">BOX3</div>
+
+    <style>
+        .box4{
+            margin:  0  auto;
+            width: 200px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 25px; /* 소시지 모양 */
+            /* 변형 속성이 1초동안 이행되는 과정을 보겠다. 이행 속성을 안 하면 눈에 안 보인다.  */
+            transition-property: transform;
+            transition-duration: 1s; /* 몇 초를 의미 */
+        }
+        .box4:active{
+            transform: rotate(1080deg); /* ratate: 회전 deg :각도 */
+        }
+    </style>
+    <div class="box4">BOX4</div>
+
+
+</body>
+</html>

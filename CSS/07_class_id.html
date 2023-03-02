@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        class 속성
+        1. 전역 속성(모든 태그가 가질 수 있는 속성)
+        2. 같은 스타일을 가진 경우에는 같은 class 속성을 지정해서 스타일을 적용한다.
+        3. 하나의 요소는 여러 class 속성을 가질 수 있다. (각 class 속성 값을 공백으로 구분한다.)
+        4. class 선택자
+            .클래스
+
+     -->
+
+     <!-- 수업 편의상 스타일이 여기로 옴 원래는 head 안에 -->
+     <style>
+        .red_text{
+            color: #FF0000;
+        }
+        .big_text{
+            font-size: 32px;
+        }
+    </style>
+        <!-- 헬로월드만 글씨 크기를 키움 / 클래스를 추가할 때 공백 한칸 띄우고 다른 클래스 적음  -->
+         <p class="red_text big_text">Hello World</p> 
+         <p class="red_text">Nice to meet you</p>
+
+         <!--
+             id  속성
+             1. 전역 속성(모든 태그가 가질 수 있는 속성)
+             2. HTML 문서 내의 모든 요소는 중복된 id 속성값을 가질 수 없다. (아이디가 똑같으면 안된다) for문 할 때 실수 많이함
+             3. id 선택자
+                #아이디
+         -->
+         <style>
+             /* a : 굵게 900이 최대 */
+            #a{
+                font-weight: 900; 
+            }
+              /* b : 가운데 정렬 */
+            #b{
+                text-align: center;
+            }
+         </style>
+         <p id="a">you good?</p>
+         <p id="b">I'm fine.</p>
+
+</body>
+</html>

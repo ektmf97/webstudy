@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .wrap1 > img:nth-of-type(2){
+          /* 자리도 차지하지 않고 안 보인다. */
+            display: none;
+        }  
+        </style>
+  
+  <div class="wrap1">
+      <img src="../../images/flower1.jpg" width="200px">
+      <img src="../../images/flower2.jpg" width="200px">
+      <img src="../../images/flower3.jpg" width="200px">      
+  </div>
+
+  <style>
+    /*  체크박스를 이미지로 바꾸기 숨겨야 한다. */
+    /* 체크박스가 안 보여도 라벨을 선택하면 체크가 풀렸다 안 풀렸다 작동  */
+        .wrap2 > input[type=checkbox] {
+            display: none;
+        }
+        .wrap2 > label {
+            padding-left: 20px;
+            background-image: url('../../images/check1.png');
+            background-size: 16px 16px;
+            background-repeat: no-repeat;/* 한번만 나와라 반복하지 말아라*/
+            background-position: 0 3px;  /* 이미지 살짝 아래로 내리기 */
+        }
+        /* 체크된 체크박스가 나옴 인접형제 + 라벨 */
+        .wrap2 > input[type=checkbox]:checked + label {
+            background-image: url('../../images/check2.png');
+        }
+    /* 
+        - id로 숨기기
+       #all{ 
+        display: none;
+        }
+
+    */
+  </style>
+  <div class="wrap2">
+    <!-- id랑 연결 -->
+    <input type="checkbox" id="all">
+    <label for="all">모두 동의합니다.</label>
+    <input type="checkbox" id="service">
+    <label for="service">서비스 이용약관에 동의합니다</label>
+  </div>
+
+  <style>
+    /* 블록 -> 인라인 */
+    .wrap3 > div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid gray;
+        display: inline; /* 인라인 요소로 바꾸기*/
+    }
+  </style>
+  <div class="wrap3">
+    <div>BOX1</div>
+    <div>BOX2</div>
+  </div>
+
+  <style>
+    /* 인라인 -> 블록 */
+    /* a, span,label 인라인 대표주자 */
+    .wrap4 > a {
+        width: 100px;
+        height: 100px;
+        text-align: center; /* 글자 정렬 */
+        line-height: 100px;/* 세로 정렬 헤이트랑 라인헤이트랑 값이 같으면 세로 정렬*/
+        border: 1px solid gray;/* 구역 정렬 */
+        display: block; /* a링크에 특징을 그래도 살리고 블럭 요소로 바꾸기 */
+    }
+  </style>
+  <div class="wrap4">
+    <!-- a링크는 너비 높이가 안 나온다 / 네이버 로그인 버튼은 a블럭으로 하고 디스플레이 블록 처리  -->
+    <a href="javascript:void(0)">링크1</a> 
+    <a href="javascript:void(0)">링크2</a>
+  </div>
+
+  <style>
+    /* 인라인 -> 블록, 블록 요소를 같은 줄에 배치  */
+    .wrap5 > a {
+        width: 100px;
+        height: 100px;
+        text-align: center; /* 글자 정렬 */
+        line-height: 100px;/* 세로 정렬 헤이트랑 라인헤이트랑 값이 같으면 세로 정렬*/
+        border: 1px solid gray;/* 구역 정렬 */
+        display: inline-block; /* 같은 줄에 배치하기 인라인 블록 요소로 바꾸기  */
+    }
+  </style>
+  <div class="wrap5">
+    <a href="javascript:void(0)">링크1</a> 
+    <a href="javascript:void(0)">링크2</a>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오계정</title>
+    <style>
+        /* CSS 초기화  */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a,a:active
+        /* 공통 */
+        .screen_out {
+            position: absolute;
+            width: 0;
+            height: 0;
+            text-indent: -9999px;
+        }
+        /* main */
+        .doc-title{
+            padding-top:50px ;
+        }
+        .logo_kakao{
+            display: block;
+            width: 88px;
+            height: 27px;
+            margin: 0 auto;
+            background: #fff url(https://accounts.kakaocdn.net/images/pc/logo_kakao.png) no-repeat 0 0 ;
+            background-size: 100px 80px;
+        }
+        .info_user{
+            margin-top: 26px;
+        }
+        
+        /* footer */
+        .doc-footer {
+            margin-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+
+        }
+        .servuce_info, .link_info {
+            font-size: 12px;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="container-doc">
+        <div class="inner-container">
+            <main class="doc-main">
+                <div clas="doc-title">
+                    <h1 class="tit_service">
+                        <span class="logo_kakao">
+                            <span class="ir_wq">kakao</span>
+                        </span>
+                    </h1>
+                </div>
+                <article class="content-article">
+                    <div class="cont_login">
+                        <div class="login_kakaomail">
+                            <from>
+                                <div class="box_tf fst">
+                                    <lable class="screen_out" for="loginKey--1">계정정보 입력</lable>
+                                    <input type="text" id="loginKey--1" placeholder="카카오메일 아이디, 이메일, 전화번호 " class="tf_g">
+                                </div>
+                                <div class="box_tf">
+                                    <lable class="screen_out" for="password--2" >비밀번호 입력</lable>
+                                    <input type="password" id="password--2" placeholder="비밀번호" autocomplete="off" class="tf_g">
+                                </div>
+                                <div class="set_login">
+                                    <div class="item_choice"></div>
+                                    <input type="checkbox" id="staySignedIn--3" class="inp_choice">
+                                     <lable class="lab_choice" for="staySignedIn--3" id="lable_staySignedIn">
+                                        <span class="ico_comm ico_check">
+                                            로그인 상태 유지
+                                        </span>
+                                     </lable>
+                                
+                                </div>
+                                <div class="confirm_btn">
+                                    <button class="btn_g highligth sbumit">로그인</button>
+                                    <span class="line_or">
+                                        <span class="txt_or">또는</span>
+                                    </span>
+                                    <button type-="button" class="btn_g">QR코드 로그인 </button>
+                                </div>
+                            </from>
+                            <div class="info_user">
+                                <a hrer="javascript:void(o)" class="link_join">회원가입</a>
+                                <ul class="list_user">
+                                    <li>
+                                        <a href="javascript:void(0)" class="link_user">계정 찾기</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="link_user">비밀번호 찾기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+            <footer class="doc-footer">
+                <strong class="screen_out">서비스 이용정보</strong>
+                <div class="service_info">
+                    <a href="javascript:void(o)" class="link_info">이용약관</a>
+                    <a href="javascript:void(o)" class="link_info"><strong>개인정보 처리방침</strong></a>
+                    <a href="javascript:void(o)" class="link_info">운영정책</a>
+                    <a href="javascript:void(o)" class="link_info">고객센터</a>
+                    <a href="javascript:void(o)" class="link_info">공지사항</a>
+                </div>
+                <small class="txt-copyright">
+                    Copyrigth ⓒ 
+                    <a  class="link_kakaocorp" href="javascript:void(0)">Kakao Corp.</a>
+                    All rights reserved.</small>
+
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
